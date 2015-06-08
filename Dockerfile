@@ -1,4 +1,4 @@
-# Installs DRAMMS and dependencies imaging tool to container
+# Installs 3Dslicer and dependencies imaging tool to container  credit to http://www.slicer.org/
 FROM phusion/baseimage
 MAINTAINER Jon McNally <jmcnall3@asu.edu>
 RUN apt-get update --fix-missing && apt-get install -y xorg wget
