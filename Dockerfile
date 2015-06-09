@@ -1,12 +1,6 @@
-# Installs 3Dslicer and dependencies imaging tool to container  credit to http://www.slicer.org/
-FROM phusion/baseimage
+# Installs 3Dslicer imaging tool to container  credit to http://www.slicer.org/ and http://phusion.github.io/baseimage-docker/
+FROM jmcnall3/3dslicer4			# Built on Phusion Baseimage Ubuntu 14.04
 MAINTAINER Jon McNally <jmcnall3@asu.edu>
-RUN apt-get update --fix-missing && apt-get install -y xorg wget
-RUN wget http://download.slicer.org/bitstream/263262 -O slicer4.tar.gz
-RUN tar -xzvf slicer4.tar.gz -C /opt
-RUN ln -s /opt/Slicer-4.4.0-linux-amd64/Slicer /usr/bin/slicer
-RUN rm -f /slicer4.tar.gz
-#
 RUN export uid=userid gid=groupid user=username && \
     groupadd -r ${user} -g ${gid} && \
     useradd -u ${uid} -g ${gid} -G sudo -d /home/${user} -s /bin/bash ${user} && \
