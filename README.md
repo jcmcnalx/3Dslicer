@@ -48,7 +48,9 @@ You should see a splashscreen as illustrated in the screen captures folder.  If 
 
 Loading and saving data can be achieved by downloading the sample data in addition to working with your own data accessible in your container mounted home directory.  See screen caputures
 
-To run non-GUI you can leave out the /bin/bash from the end of the docker run command
+Non-GUI tools are usable without the Slicer GUI.  See 3DSlicer documentation for these tools and usage.
+
+3DSlicer official documentation  http://www.slicer.org/slicerWiki/index.php/Documentation/4.4
 
 ----------
 Tested on Docker hosts:
